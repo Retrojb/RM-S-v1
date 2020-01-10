@@ -1,0 +1,42 @@
+{
+  "name": "chore",
+  "plural": "chores",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "chore": {
+      "type": "string",
+      "required": true
+    },
+    "choreType": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rooms": {
+      "type": "hasMany",
+      "model": "rooms",
+      "foreignKey": "id"
+    },
+    "house": {
+      "type": "hasMany",
+      "model": "house",
+      "foreignKey": "id"
+    },
+    "User": {
+      "type": "hasMany",
+      "model": "User",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

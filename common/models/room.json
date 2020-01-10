@@ -1,0 +1,37 @@
+{
+  "name": "room",
+  "plural": "rooms",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "roomName": {
+      "type": "string",
+      "required": true
+    },
+    "roomType": {
+      "type": "string",
+      "default": "public"
+    },
+    "owner": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "house": {
+      "type": "hasOne",
+      "model": "house",
+      "foreignKey": "id"
+    },
+    "Chore": {
+      "type": "hasMany",
+      "model": "chore",
+      "foreignKey": "id"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

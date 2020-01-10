@@ -1,0 +1,17 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "roommateDb": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "",
+    "database": "roommateDb",
+    "password": "",
+    "name": "roommateDb",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}
